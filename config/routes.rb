@@ -1,4 +1,8 @@
 TeashopV3::Application.routes.draw do
+  devise_for :users
+
+  get "home/index"
+
   get "site/about"
 
   get "site/contact"
@@ -10,6 +14,8 @@ TeashopV3::Application.routes.draw do
   match '/contact' => 'site#contact'
 
   resources :items
+
+  root :to => 'home#index'
 
 
   # The priority is based upon order of creation:

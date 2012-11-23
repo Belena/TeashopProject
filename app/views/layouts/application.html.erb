@@ -20,13 +20,15 @@
 
 <ul>
 
+<li><a href="/home/index">Home</a></li>
+
 <li><a href="/items">Our products</a></li>
 
 <li><a href="/about">About us</a></li>
 
 <li><a href="/contact">Contact Us</a></li>
 
-<li><a href="/Admin">Login</a></li>
+<li><a href="/users/sign_in">Login</a></li>
 
 <li><a href="/logout">Logout</a></li>
 
@@ -36,16 +38,36 @@
 </div>
 <div id='container'>
 <div id='content'>
+<% if flash[:notice] -%>
+    <p style="color: green"><%= flash[:notice] %></p>
+    <%end -%>
+
 <%= yield %>
 </div>
+
+<p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+ 
+
+
 <div id='first-column'>
+	 <% if user_signed_in? %>
+  <div>Signed in as... <%= current_user.email %> (<%= link_to 'Sign out', destroy_user_session_path, :method => :delete
+ %>)</div>
+ <% else %>
+  <%= link_to 'Register', new_user_registration_path %> or <%= link_to 'Sign in', new_user_session_path %>
+<% end %>
 <div class="searchbox">
 <h2 class="BoxHeaders">Search</h2>
 <input type="text" name="search" /><input type="submit" value="Search" />
 </div>
 <div class="box">
-<h1 class="BoxHeaders">Categories</h1></br></br>
-<h3> <%= render '/items/categoryDistinctList' %></h3>
+<h1 class="BoxHeaders">Shop by category:</h1></br></br>
+<h2><%= render '/items/categoryDistinctList' %>
+
+
+</h2>
 
 </div>
 <div class="box">
