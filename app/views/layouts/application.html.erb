@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ONLINE TEASHOP</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+
+<body>
+
+	
+<div id='header'>
+<!-- Header Image Displayes here -->
+</div>
+<div id='menu'>
+<!-- Header Image Displayes here -->
+<div id="navbar">
+
+<ul>
+
+<li><a href="/items">Our products</a></li>
+
+<li><a href="/about">About us</a></li>
+
+<li><a href="/contact">Contact Us</a></li>
+
+<li><a href="/Admin">Login</a></li>
+
+<li><a href="/logout">Logout</a></li>
+
+</ul>
+
+</div>
+</div>
+<div id='container'>
+<div id='content'>
+<%= yield %>
+</div>
+<div id='first-column'>
+<div class="searchbox">
+<h2 class="BoxHeaders">Search</h2>
+<input type="text" name="search" /><input type="submit" value="Search" />
+</div>
+<div class="box">
+<h1 class="BoxHeaders">Categories</h1></br></br>
+<h3> <%= render '/items/categoryDistinctList' %></h3>
+
+</div>
+<div class="box">
+<h2 class="BoxHeaders">Our best sellers!</h2>
+<p><a href="/items/2"><img src="/assets/LGOG.jpg" alt="image of tea" style="height:100px"></a>
+</p>
+</div>
+
+</div>
+</div>
+<div id='footer'>
+<h6 class="footertext">&copy; Online teashop trade; 2012</h6>
+</div>
+
+</body>
+</html>

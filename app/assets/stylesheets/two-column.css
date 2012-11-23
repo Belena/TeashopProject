@@ -1,0 +1,123 @@
+body {
+    font:15px/16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    color:#7e543a;
+    background:#2c2d1e url("/assets/tea-plantation.jpg") no-repeat top center fixed;
+    margin: 0;
+    padding: 0;
+}
+h1, h6 {
+    margin: 0;
+    font-weight: normal;
+}
+div#container {
+    position: relative;
+    min-height: 880px;
+    /*border: 1px solid gray;*/
+    /*background: lightgrey;*/
+    max-width: 1000px;
+    min-width: 950px;
+    margin: auto;
+}
+div#first-column {
+    margin: 1px 0px 1px 0px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /*border: 1px solid gray;*/
+    background-color: white;
+    width: 279px;
+   
+}
+div#first-column {
+    left: 710px;
+}
+div#content {
+    left: 0;
+    margin: 3px 3px 3px 5px;
+    padding: 0px;
+    /*background: rgb(240, 240, 240);*/
+    background-color: white;
+    /*border: 1px solid gray;*/
+    min-height: 392px;
+    width: 700px;
+}
+div#header,
+div#footer,
+div#menu {
+    
+    padding: 0;
+    
+    max-width: 994px;
+    min-width: 744px;
+    margin: auto;
+}
+div#menu {
+    border-bottom: none;
+    width: 994px;
+    height: 28px;
+}
+div#header {
+    border-bottom: none;
+    
+    width: 994px;
+    height: 100px;
+}
+div#footer {
+    border-top: none;
+}
+
+div.box {
+   
+    margin: 0px 0px 30px 3px;
+    padding: 5px;
+    height: 260px;
+}
+
+
+
+div.searchbox {
+    /*border: 1px solid gray;*/
+    margin: 0px 0px 30px 1px;
+    padding: 3px;
+    height: 65px;
+}
+
+/* ------------------------- */
+#navbar{
+    
+
+height: 64px;
+}
+    
+
+
+}
+ #navbar ul          
+ {
+     margin: 0;         
+     padding: 5px;         
+     list-style-type: none;         
+     text-align: left;        
+     background-color: #A3D119
+;         
+ }  
+ 
+ #navbar ul li           
+ {
+     display: inline;
+       
+ }  
+ 
+ #navbar ul li a          
+ {
+     text-decoration: none;         
+     padding: .2em 1em;         
+     color: #fff;         
+     background: url("/assets/navigation.png") no-repeat;        
+     }  
+     
+#navbar ul li a:hover          
+{
+    color: #000;         
+    background-color: white;         
+}
