@@ -13,8 +13,9 @@ h1, h6 {
 
    
 div#container {
+    border: 1px solid #EDF0E1;
     position: relative;
-    min-height: 880px;
+    min-height: 900px;
     /*border: 1px solid gray;*/
     /*background: lightgrey;*/
     max-width: 1000px;
@@ -22,13 +23,14 @@ div#container {
     margin: auto;
 }
 div#first-column {
+ 
     margin: 1px 0px 1px 0px;
     position: absolute;
     top: 0;
     bottom: 0;
-    /*border: 1px solid gray;*/
+    border: 1px solid #EDF0E1;
     background-color: white;
-    width: 279px;
+    width: 290px;
    
 }
 div#first-column {
@@ -36,7 +38,7 @@ div#first-column {
 }
 div#content {
     left: 0;
-    margin: 3px 3px 3px 5px;
+    /*margin: 3px 3px 3px 5px;*/
     padding: 5px;
     /*background: rgb(240, 240, 240);*/
     background-color: white;
@@ -72,8 +74,8 @@ div#footer {
 div.box {
    
     margin: 0px 0px 30px 3px;
-    padding: 5px;
-    height: 260px;
+    /*padding: 5px;*/
+    height: 280px;
 }
 
 
