@@ -1,5 +1,5 @@
 body {
-    font:15px/16px "Trebuchet MS", Arial, sans-serif;
+    font:15px/16px "Trebuchet MS", Arial, Helvetica, sans-serif;
     color:#7e543a;
     background:#2c2d1e url("/assets/tea-plantation.jpg") no-repeat top center fixed;
     margin: 0;
