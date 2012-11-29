@@ -9,6 +9,8 @@ get "cart/index"
 
 get "site/about"
 
+get "site/logout"
+
   get "site/contact"
   
   match '/category/:id' => 'items#category'
