@@ -1,10 +1,5 @@
-<h1>Our tea catalog</h1>
-<br />
+<h1>Catalog</h1>
 <table class="catalog">
-
-<br />
-<table class="catalog">
-
 <% @items.each do |item| %>
 <tr>
 <td>
@@ -20,15 +15,16 @@
 <%=h item.description %>
 </div>
 <div class="price">
-<%= number_to_currency(item.price, :unit => "&pound;") %>
+<%= number_to_currency(item.price, :unit => "&dollar;") %>
 </div>
 <div class="links">
 <%= link_to 'Edit', edit_item_path(item) %> |
 <%= link_to 'Destroy', item, :confirm => 'Are you sure?', :method => :delete %>
+<a href="/cart/<%= item.id %>">Add to Cart</a><br><br>
 </div>
 </td>
 </tr>
-
 <% end %>
 </table>
 <p><%= link_to 'New item', new_item_path %></p>
+

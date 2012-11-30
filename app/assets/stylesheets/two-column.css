@@ -21,6 +21,7 @@ div#container {
     max-width: 1000px;
     min-width: 950px;
     margin: auto;
+    overflow:hidden;
 }
 div#first-column {
  
@@ -45,6 +46,8 @@ div#content {
     /*border: 1px solid gray;*/
     min-height: 392px;
     width: 700px;
+	padding-bottom:3000px;
+	margin-bottom:-3000px;
 }
 div#header,
 div#footer,
@@ -76,6 +79,10 @@ div.box {
     margin: 0px 0px 30px 3px;
     /*padding: 5px;*/
     height: 280px;
+}
+div.section{
+	padding-bottom:3000px;
+	margin-bottom:-3000px;
 }
 
 
