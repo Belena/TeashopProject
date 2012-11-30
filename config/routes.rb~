@@ -1,15 +1,29 @@
 TeashopV3::Application.routes.draw do
+  get "orderitems/index"
+
+  get "orderitems/show"
+
+  get "orderitems/new"
+
+  get "orderitems/edit"
+
+  devise_for :users do
+resources :orders
+end
+resources :orders do
+resources :orderitems
+end
+
+
   get "cart/index"
 
-  devise_for :users
+  
 
   get "home/index"
 
 get "cart/index"  
 
 get "site/about"
-
-get "site/logout"
 
   get "site/contact"
   
@@ -26,6 +40,9 @@ match '/cart/:id' => 'cart#add'
 match '/cart/remove/:id' => 'cart#remove'
 
 match '/clearCart' => 'cart#clearCart'
+
+match '/checkout' => 'cart#createOrder'
+
 
   resources :items
 

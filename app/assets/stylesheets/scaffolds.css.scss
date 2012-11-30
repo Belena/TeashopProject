@@ -2,8 +2,8 @@ body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 p, ol, ul, td {
@@ -19,13 +19,9 @@ pre {
 }
 
 a {
-font-size: 18px;
-line-height: 18px;
-  text-decoration: none;
-  font: 14px/16px "Trebuchet MS", Arial, Helvetica, sans-serif;
-  color: #7E543A;
+  color: #000;
   &:visited {
-    color: #F8B86C;
+    color: #666;
   }
   &:hover {
     color: #fff;
