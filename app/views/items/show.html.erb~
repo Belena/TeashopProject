@@ -18,7 +18,7 @@
 <p>
   <b>Image url:</b>
   <%= @item.image_url %>
-  <%= image_tag @item.image_url, :style => "height:100px"%>
+  <%= image_tag item.image_url, :style => "height:100px"%>
 </p>
 
 <p>

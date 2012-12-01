@@ -1,9 +1,9 @@
 class ItemsController < ApplicationController
- before_filter :authenticate_user!
+ before_filter :authenticate_user!, :except=>[:index,:category, :show]
   # GET /items
   # GET /items.json
 
-	before_filter :ensure_admin, :only => [:new, :create, :edit, :destroy]
+ before_filter :ensure_admin, :only => [:new, :create, :edit, :destroy]
 
   def category
      @items = Item.find_all_by_category(params[:id])
