@@ -3,6 +3,6 @@
 <% @items.each do | c | %>
 
 <a href="/category/<%= c.category %>" id="categorylisting"><%= c.category %></a>
-<br /><br />
+<br /><br /><br />
 <% end %>
 </div>
