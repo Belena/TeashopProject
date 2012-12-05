@@ -1,4 +1,6 @@
 TeashopV3::Application.routes.draw do
+  resources :profiles
+
   get "orderitems/index"
 
   get "orderitems/show"
@@ -33,9 +35,10 @@ match '/cart' => 'cart#index'
 
 match '/cart/:id' => 'cart#add'
 
-  match '/about' => 'site#about'
+match '/about' => 'site#about'
 
-  match '/contact' => 'site#contact'
+match '/contact' => 'site#contact'
+
 
 match '/cart/remove/:id' => 'cart#remove'
 
@@ -43,10 +46,14 @@ match '/clearCart' => 'cart#clearCart'
 
 match '/checkout' => 'cart#createOrder'
 
+match '/myprofile' => 'profiles#myprofile'
+
 
   resources :items
 
   root :to => 'home#index'
+
+
 
 
   # The priority is based upon order of creation:

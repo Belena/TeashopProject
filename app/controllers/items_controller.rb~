@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
- before_filter :authenticate_user!, :except=>[:index,:category]
+ before_filter :authenticate_user!, :except=>[:index,:category, :show]
   # GET /items
   # GET /items.json
 

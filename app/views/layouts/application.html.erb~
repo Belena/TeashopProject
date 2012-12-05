@@ -28,9 +28,10 @@
 
 <li><a href="/contact">Contact Us</a></li>
 
-<li><a href="/users/sign_in">Login</a></li>
+<li><a href="/users/sign_in">Your profile</a></li>
 
-<li><a href="/logout">Logout</a></li>
+<li><%= link_to 'Log out', destroy_user_session_path, :method => :delete
+ %></li>
 
 </ul>
 
@@ -59,10 +60,10 @@
 <% end %>
 <div class="searchbox">
 <h2 class="BoxHeaders">Search</h2>
-<input type="text" name="search" /><input type="submit" value="Search" />
+<%= render :partial => 'items/search'%>
 </div>
 <div class="box">
-<h1 class="BoxHeaders">Shop by category:</h1></br></br>
+<h1 class="BoxHeaders">Shop by category:</h1></br>
 <h2><%= render '/items/categoryDistinctList' %>
 
 

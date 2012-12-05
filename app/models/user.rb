@@ -9,4 +9,6 @@ devise :database_authenticatable, :registerable,
 attr_accessible :email, :password, :password_confirmation, :remember_me
 
 has_many :orders
+
+has_one :profiles
 end
