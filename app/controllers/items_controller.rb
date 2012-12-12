@@ -5,6 +5,16 @@ class ItemsController < ApplicationController
 
  before_filter :ensure_admin, :only => [:new, :create, :edit, :destroy]
 
+  def search
+	@search_term = params[:q]
+	st = "%#{params[:q]}%"
+	@items = Item.where("Title like ? or Description like ?", st, st)
+	respond_to do |format|
+	format.html # index.html.erb
+	format.json { render json: @items }
+	end
+   end
+
   def category
      @items = Item.find_all_by_category(params[:id])
  @category = params[:id]
@@ -97,12 +107,6 @@ end
 	unless current_user && current_user.admin?
 	   render :text => "Access Error Message", :status => :unauthorized
 	end
-  end
-
-  def search
-	@search_term = params[:q]
-	st="%#{params[:q]}%"
-	@items = Item.where("Title like ? or Description ?",st,st)
   end
   
 end

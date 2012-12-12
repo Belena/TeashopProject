@@ -36,7 +36,7 @@ def checkout
 flash[:notice] = "CHECKOUT IS NOT IMPLEMENTED YET!!!"
 redirect_to :action => :index
 end
-end
+
 def createOrder
 # Step 1: Get the current user
 @user = User.find(current_user.id)
@@ -52,5 +52,7 @@ item.title, :description => item.description,
 :quantity => quantity, 
 :price => item.price) 
 @orderitem.save
+end
+
 end
 end

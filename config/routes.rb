@@ -1,6 +1,8 @@
 TeashopV3::Application.routes.draw do
   resources :profiles
 
+  match '/search' => 'items#search'
+
   get "orderitems/index"
 
   get "orderitems/show"
