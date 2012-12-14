@@ -24,6 +24,7 @@ div#container {
     min-width: 950px;
     margin: auto;
     overflow:hidden;
+    text-align: justify;
 }
 div#first-column {
  
