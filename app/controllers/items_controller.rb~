@@ -98,5 +98,11 @@ end
 	   render :text => "Access Error Message", :status => :unauthorized
 	end
   end
+
+  def search
+	@search_term = params[:q]
+	st="%#{params[:q]}%"
+	@items = Item.where("Title like ? or Description ?",st,st)
+  end
   
 end

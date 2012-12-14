@@ -98,7 +98,9 @@ div.box h2{
 	margin-top:20px;
     text-align: center;
 }
-
+div.box img{
+	float:left;
+}
 
 
 div.categoryListAll a

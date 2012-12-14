@@ -60,7 +60,7 @@
 <% end %>
 <div class="searchbox">
 <h2 class="BoxHeaders">Search</h2>
-<%= render :partial => 'items/search'%>
+<%= render :partial => 'items/search' %>
 </div>
 <div class="box">
 <h1 class="BoxHeaders">Shop by category:</h1></br>
@@ -73,7 +73,7 @@
 <div class="section">
 <div class="box">
 <h2 class="BoxHeaders">Our best sellers!</h2>
-<p><a href="/items/2"><img src="/assets/LGOG.jpg" alt="image of tea" style="height:100px"></a>
+<p><a href="/items/2"><img src="/assets/LGOG.jpg" alt="image of tea" style="height:50px"></a>
 </p>
 </div>
 </div>

@@ -53,7 +53,7 @@ match '/myprofile' => 'profiles#myprofile'
 
   root :to => 'home#index'
 
-match '/search' =>'items#search'
+
 
 
   # The priority is based upon order of creation:
